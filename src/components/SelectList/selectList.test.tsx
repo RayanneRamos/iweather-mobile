@@ -14,6 +14,6 @@ describe("Component: SelectList", () => {
     const selectedCity = screen.getByText(/rio/i);
     fireEvent.press(selectedCity);
 
-    expect(onPress).toBeCalledTimes(1);
+    expect(onPress).toBeCalledWith(data[0]);
   });
 });
