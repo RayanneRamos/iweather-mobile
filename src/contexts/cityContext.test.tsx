@@ -4,8 +4,19 @@ import { CityProvider } from "./CityContext";
 
 describe("Context: CityContext", () => {
   it("should be change selected city", async () => {
-    const result = renderHook(() => useCity(), { wrapper: CityProvider });
+    const { result } = renderHook(() => useCity(), { wrapper: CityProvider });
 
-    await waitFor(() => act(() => console.log(result.current)));
+    await waitFor(() =>
+      act(() =>
+        result.current.handleChanceCity({
+          id: "1",
+          name: "Rio de Janeiro",
+          latitude: 123,
+          longitude: 456,
+        })
+      )
+    );
+
+    expect(result.current.city?.name).toBe("Rio de Janeiro");
   });
 });
