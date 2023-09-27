@@ -5,6 +5,8 @@ import {
   waitFor,
   screen,
   waitForElementToBeRemoved,
+  act,
+  fireEvent,
 } from "@__tests__/utils/customRender";
 import { Dashboard } from ".";
 import { saveStorageCity } from "@libs/asyncStorage/cityStorage";
@@ -48,5 +50,22 @@ describe("Screen: Dashboard", () => {
     render(<Dashboard />);
 
     await waitForElementToBeRemoved(() => screen.queryByTestId("loading"));
+
+    const cityName = "Rio de Janeiro";
+
+    await waitFor(() =>
+      act(() => {
+        const search = screen.getByTestId("search-input");
+        fireEvent.changeText(search, cityName);
+      })
+    );
+
+    await waitFor(() =>
+      act(() => {
+        fireEvent.press(screen.getByText(cityName, { exact: false }));
+      })
+    );
+
+    expect(screen.getByText(cityName, { exact: false })).toBeTruthy();
   });
 });
