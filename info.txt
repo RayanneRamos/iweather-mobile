@@ -1,5 +1,9 @@
 --> Gerar  a build pro android
 
-// Comando para gerar o apk local -> eas build -p android --profile preview --local (válido para linux e macOS)
-// Comando para gerar o apk -> eas build -p android --profile preview 
-// Comando para gerar o apk -> eas build -p android --profile production --message "first production deploy"
+*  Comando para gerar o apk local -> eas build -p android --profile preview --local (válido para linux e macOS)
+*  Comando para gerar o apk -> eas build -p android --profile preview 
+*  Comando para gerar o apk -> eas build -p android --profile production --message "first production deploy"
+
+--> Gerar a build pro IOS
+
+*  Instalar o Fastlane
