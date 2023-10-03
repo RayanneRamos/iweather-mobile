@@ -7,3 +7,4 @@
 --> Gerar a build pro IOS
 
 *  Instalar o Fastlane
+*  npx eas build -p ios --profile preview --local (válido somente no macOS)
