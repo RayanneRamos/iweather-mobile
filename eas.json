@@ -5,7 +5,8 @@
   "build": {
     "preview": {
       "android": {
-        "buildType": "apk"
+        "buildType": "apk",
+        "image": "latest"
       },
       "env": {
         "EXPO_PUBLIC_WEATHER_APP_ID": "c5c0fefcc4fc3669838dc96599095384"
@@ -13,3 +14,4 @@
     }
   }
 }
+// Comando para gerar o apk local -> eas build -p android --profile preview --local (válido para linux e macOS)
