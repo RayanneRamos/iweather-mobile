@@ -8,3 +8,4 @@
 
 *  Instalar o Fastlane
 *  npx eas build -p ios --profile preview --local (válido somente no macOS)
+*  npx eas build -p ios --profile production 
