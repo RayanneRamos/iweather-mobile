@@ -5,7 +5,7 @@
   "build": {
     "preview": {
       "android": {
-        "buildType": "apk",
+        "distribution": "internal",
         "image": "latest"
       },
       "env": {
@@ -15,3 +15,4 @@
   }
 }
 // Comando para gerar o apk local -> eas build -p android --profile preview --local (válido para linux e macOS)
+// Comando para gerar o apk -> eas build -p android --profile preview 
