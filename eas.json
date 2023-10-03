@@ -19,6 +19,3 @@
     }
   }
 }
-// Comando para gerar o apk local -> eas build -p android --profile preview --local (válido para linux e macOS)
-// Comando para gerar o apk -> eas build -p android --profile preview 
-// Comando para gerar o apk -> eas build -p android --profile production --message "first production deploy" 
